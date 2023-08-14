@@ -1,0 +1,602 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../assets/fonts/Pacifico-Regular.ttf");
+}
+
+.Pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+.grey_color1 {
+  background-color: #6c757e !important;
+}
+
+.grey_color2 {
+  color: #6c757e !important;
+}
+
+.green_color1 {
+  background-color: #1bbc9b !important;
+  padding: 11% 0 7% 0;
+}
+
+.green_color2 {
+  color: #1bbc9b !important;
+}
+
+.green_color3 {
+  background-color: #1bbc9b !important;
+}
+
+.footer_color1 {
+  background-color: #2d3e50;
+}
+
+.footer_color2 {
+  background-color: #1b252f;
+}
+
+#hero_section2 {
+  background-image:url('../img/courses-cover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#hero_section3 {
+  background-color: #0f846d;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.marko {
+  box-shadow: inset 0 0 0 0 #1bbc9b;
+  color: #1bbc9b;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.tooltip-success {
+  --bs-tooltip-bg: #1bbc9b;
+}
+
+.marko:hover {
+  box-shadow: inset 200px 0 0 0 #1bbc9b;
+  color: white;
+}
+
+.rotate {
+  animation: rotation 7s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate2 {
+  animation: rotation2 7s infinite linear;
+}
+
+@keyframes rotation2 {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  transition: color .35s ease-in-out, background-color .35s ease-in-out, border-color .35s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #1bbc9b !important;
+}
+
+.avatar_area img {
+  width: 40%;
+}
+
+.minus_i {
+  margin-left: -5px !important;
+}
+
+.button_span {
+  display: inline;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+.q_numbers {
+  width: 20%;  
+  display: block;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255, 255, 255);
+}
+
+.navbar-toggler-icon {
+  width: 1em !important;
+  height: 1em !important;
+}
+
+.menu_label {
+  font-size: 0.7em;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.12rem rgb(255, 255, 255) !important;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: 0.7s;
+}
+
+.hovereffect:hover .overlay {
+  background: rgb(27, 188, 155, 0.9);
+  cursor: pointer;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+}
+
+.hovereffect hr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  border: 10px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  background-color: transparent;
+  margin: 0px;
+}
+
+.hovereffect hr:nth-child(1) {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 90deg) scale3d(0, 0, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 90deg) scale3d(0, 0, 1);
+}
+
+.hovereffect hr:nth-child(2) {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 180deg) scale3d(0, 0, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 180deg) scale3d(0, 0, 1);
+}
+
+.hovereffect:hover hr:nth-child(1) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -90deg) scale3d(1, 1, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -90deg) scale3d(1, 1, 1);
+}
+
+.hovereffect:hover hr:nth-child(2) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -180deg) scale3d(1, 1, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -180deg) scale3d(1, 1, 1);
+}
+
+.border_none {
+  border: none !important;
+}
+
+.modal-backdrop {
+  background-color: rgb(27, 188, 155) !important;
+}
+
+.modal_img1 {
+  border-radius: 10px;
+}
+
+.button_contact {
+  background-color: #1bbc9b;
+  border: none;
+  color: white;
+  padding: 15px 26px;
+  transition: 0.7s;
+}
+
+.button_contact:hover {
+  background-color: #0f846d;
+  color: white;
+}
+
+.button_kurs {
+  background-color: transparent;
+  border: #1bbc9b solid 1px;
+  color: black;
+  width: 85%;
+  transition: 0.7s;
+}
+
+.button_kurs:hover {
+  background-color: #0f846d;
+  color: white;
+}
+.button_kurs2 {
+  background-color: transparent;
+  border: #1bbc9b solid 1px;
+  color: black;
+  width: 85%;
+  transition: 0.7s;
+}
+
+.button_kurs2:hover {
+  background-color: #0f846d;
+  color: white;
+}
+
+.button_kurs3 {
+  background-color: transparent;
+  border: #de0404 solid 1px;
+  color: #de0404;
+  width: 85%;
+  transition: 0.7s;
+}
+
+.button_kurs3:hover {
+  background-color: #de0404;
+  color: white;
+}
+
+.button_modal1 {
+  background-color: #1bbc9b;
+  border: none;
+  color: white;
+  padding: 15px 26px;
+  transition: 0.7s;
+}
+
+.button_modal1:hover {
+  background-color: #0f846d;
+  color: white;
+}
+
+input[type=text],
+input[type=email] {
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.radioBG {
+  padding: 12px 20px;
+  border: #2d3e50 1px solid;
+  background-color: #b0e5db;
+}
+#addTextArea{
+  display:none;
+}
+
+.PlaceHolderIme {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.ime {
+  text-transform: uppercase;
+}
+
+#fPrice {
+  display: inline;
+    position: absolute;
+    left: 49.57%;
+    font-size: 1.6em;
+    padding-bottom: 10px;
+    color: blue;
+}
+
+.is-hidden {
+  display: none;
+}
+
+h5 {
+  font-size: .95rem !important;
+}
+
+input[type=textarea] {
+  padding: 12px 20px;
+}
+
+.form-control:focus {
+  border-color: rgb(27, 188, 155);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(27, 188, 155);
+}
+
+.fbicon {
+  display: inline;
+}
+
+.fa-square-facebook,
+.fa-square-instagram,
+.fa-square-twitter,
+.fa-linkedin {
+  color: #ffffff !important;
+  transition: 0.7s;
+}
+
+.fa-square-facebook:hover,
+.fa-square-instagram:hover,
+.fa-square-twitter:hover,
+.fa-linkedin:hover {
+  color: #1bbc9b !important;
+}
+
+.fa-xlz {
+  font-size: 3em !important;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.04167em;
+  vertical-align: -0.125em;
+}
+
+.gototop {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  z-index: 99999;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+}
+
+.icons_top {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.circle_icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  max-width: 90px;
+  height: 90px;
+  color: #1b252f;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.7s all;
+}
+
+.circle_icon:hover {
+  animation: pulse 1s;
+  animation-fill-mode: forwards;
+}
+
+.icon_gliph {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon_gliph i {
+  color: #1b252f;
+}
+
+.fa-mobile-screen,
+.fa-pencil,
+.fa-thumbs-up,
+.fa-circle-question {
+  color: rgb(27, 188, 155) !important;
+  transition: 0.7s;
+}
+
+.circle_icon:hover .fa-mobile-screen {
+  color: #1b252f !important;
+  transition: 0.7s;
+}
+
+.circle_icon:hover .fa-pencil {
+  color: #1b252f !important;
+  transition: 0.7s;
+}
+
+.circle_icon:hover .fa-thumbs-up {
+  color: #1b252f !important;
+  transition: 0.7s;
+}
+
+.circle_icon:hover .fa-circle-question {
+  color: rgb(27, 37, 47) !important;
+  transition: 0.7s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(27, 37, 47, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(27, 37, 47, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(27, 37, 47, 0);
+  }
+}
+
+.port_img1 {
+  background: url('../img/portfolio-1.jpg');
+  height: 100%;
+  max-height: 400px;
+  position: relative;
+  background-size: cover;
+}
+
+.port_img2 {
+  background: url('../img/portfolio-2.jpg');
+  height: 400px;
+  position: relative;
+  background-size: cover;
+}
+
+.port_img3 {
+  background: url('../img/portfolio-3.jpg');
+  height: 400px;
+  position: relative;
+  background-size: cover
+}
+
+.port_img4 {
+  background: url('../img/portfolio-4.jpg');
+  height: 400px;
+  position: relative;
+  background-size: cover
+}
+
+
+.port_img1:hover {
+  transform: scale(0.85);
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+.ortf_imgs {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  transition: all .8s ease;
+  transform: scale(100%);
+}
+
+.ortf_imgs:hover {
+  transform: scale(90%);
+}
+
+.text_imgs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-600px);
+  transition: all 1s;
+  z-index: 99;
+}
+
+.ortf_imgs:hover .text_imgs {
+  transform: translateX(0px);
+  cursor: pointer;
+}
+
+.text_imgs_greenoverlay {
+  background: rgb(27, 188, 155, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  transition: .8s;
+}
+
+table.dataTable.no-footer {
+  border-bottom: none !important;
+}
+tr th{
+  background-color: transparent !important;
+}
+tbody, td, tfoot, th, thead, tr {
+ 
+  border-style: none !important;
+}
+.reserv_button {
+  background-color: transparent;
+  border: #ffffff solid 1px;
+  color: white;
+  width: 20em;
+  transition: 0.7s;
+}
+
+.reserv_button:hover {
+  background-color: #0f846d;
+  color: white;
+}
+.reserv_button2 {
+  background-color: transparent;
+  border: #ffffff solid 1px;
+  color: white;
+  width: 20em;
+  transition: 0.7s;
+}
+
+.reserv_button2:hover {
+  background-color: #0f846d;
+  color: white;
+}
+
+
+
+/* <td><button id="` + kurs.details + `" class="btn button_kurs dugme_${kurs.id}">
+Details</button></td>
+<td><button id="` + kurs.reservation + `" class="btn button_kurs2 dugme2_${kurs.id}">
+Reserve</button></td> */

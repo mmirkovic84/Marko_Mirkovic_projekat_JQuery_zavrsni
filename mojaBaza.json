@@ -1,0 +1,87 @@
+{
+  "kursevi": [
+    {
+      "id": 1,
+      "courseName": "Napredno Programiranje",
+      "startDate": "1.2.2024.",
+      "duration": 20,
+      "price": 250,
+      "details": "",
+      "reservation": ""
+    },
+    {
+      "id": 2,
+      "courseName": "Osnovno Programiranje",
+      "startDate": "13.2.2024.",
+      "duration": 20,
+      "price": 250,
+      "details": "",
+      "reservation": ""
+    },
+    {
+      "id": 3,
+      "courseName": "Web Programiranje - Frontend",
+      "startDate": "4.3.2024.",
+      "duration": 30,
+      "price": 500,
+      "details": "",
+      "reservation": ""
+    },
+    {
+      "id": 4,
+      "courseName": "Web Programiranje - Backend",
+      "startDate": "4.3.2024.",
+      "duration": 30,
+      "price": 500,
+      "details": "",
+      "reservation": ""
+    },
+    {
+      "id": 5,
+      "courseName": "Manuelno testiranje Softvera",
+      "startDate": "12.6.2024.",
+      "duration": 20,
+      "price": 250,
+      "details": "",
+      "reservation": ""
+    },
+    {
+      "id": 6,
+      "courseName": "Automatsko testiranje Softvera",
+      "startDate": "12.6.2024.",
+      "duration": 20,
+      "price": 250,
+      "details": "",
+      "reservation": ""
+    }
+  ],
+  "rezervisano": [
+    {
+      "name": "Marina",
+      "surname": "Jovanovic",
+      "email": "marinajovan88@gmail.com",
+      "coursename": "Web Programiranje - Backend",
+      "price": "500",
+      "note": "Ne znam sta bih rekla ",
+      "id": 2
+    },
+    {
+      "name": "Marjan",
+      "surname": "Peric",
+      "email": "marjannnn89@gmail.com",
+      "coursename": "Web Programiranje - Frontend",
+      "price": "500",
+      "note": "Ne znam nista o ovome.",
+      "id": 4
+    },
+    {
+      "name": "Marina",
+      "surname": "Milijevic",
+      "email": "jasdad@gms.com",
+      "coursename": "Web Programiranje - Backend",
+      "price": "500",
+      "note": "Nesto da napisemo bla bla blaaaaaadsdsds",
+      "id": 5
+    }
+  ]
+}

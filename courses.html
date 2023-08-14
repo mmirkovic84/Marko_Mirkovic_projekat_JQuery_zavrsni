@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - Marko Mirkovic</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fontawesome6/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/fontawesome6/css/brands.css">
+  <link rel="stylesheet" href="assets/fontawesome6/css/solid.css">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="assets/iconsbs/font/bootstrap-icons.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary grey_color1 text-uppercase pt-3 pb-3" id="navbar_id">
+      <div class="container text-light">
+        <a class="navbar-brand text-light Pacifico text-capitalize marko" href="index.html">Marko Mirkovic</a>
+        <button class="navbar-toggler custom-toggler green_color3" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+          aria-label="Toggle navigation" id="hamburger_menu_button">
+          <span class="button_span text-light menu_label">MENU</span>
+          <span class="navbar-toggler-icon text-light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-light fw-bold" aria-current="page" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fw-bold" href="survey.html">Survey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fw-bold" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fw-bold" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fw-bold" href="#contactus">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION HERO -->
+  <section class="green_color1" id="hero_section2">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6 offset-3">
+          <h1 class="text-center">Courses</h1>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="green_color3">
+    <div class="container-fluid">
+      <div class="row d-flex aligns-items-center justify-content-center">
+        <div class="col-12 p-3" id="tableKursevi">
+
+          <table id="tabela1" class="table table-striped table-hover table-bordered pt-3 pb-3">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Course Name</th>
+                <th>Start Date</th>
+                <th>Duration</th>
+                <th>Price</th>
+                <th>Details</th>
+                <th>Reserve</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="row d-flex aligns-items-center justify-content-center">
+          <div class="col-12 p-3" id="tableRezervisano">
+
+            <table id="tabela2" class="table table-striped table-hover table-bordered pt-3 pb-3">
+              <thead>
+                <tr>
+                  
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>e-Mail</th>
+                  <th>Course</th>
+                  <th>Price</th>
+                  <th>Note</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              
+              
+            </table>
+            <div id="result"></div>
+          </div>
+        </div>
+
+        <div class="row d-flex aligns-items-center justify-content-center">
+          <div class="col-2 offset-10">
+            <div id="mainSwitchButton" class="pb-5 mb-5">
+              <button class="btn reserv_button2 float-end reserv_button">View Reservations</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modal 1 -->
+  <!-- <div id="modalInfo" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createEditModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="unosForma">
+          <p id="izmenaID" class="d-none"></p>
+          <label for="ime">Ime:</label>
+          <input type="text" id="ime" name="ime" class="form-control">
+          <label for="prezime">Prezime:</label>
+          <input type="text" id="prezime" name="prezime" class="form-control">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="form-control">
+          <label for="jmbg">JMBG:</label>
+          <input type="text" id="jmbg" name="jmbg" class="form-control">
+          <label for="komentar">Komentar:</label>
+          <textarea name="komentar" id="komentar" class="form-control"></textarea>
+          <hr>
+          <button class="btn btn-primary">Posalji</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+  <!-- / Modal 1 -->
+
+  <!-- MODAL -->
+  <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border_none">
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row pb-5">
+            <div class="col-md-6 col-md-offset3 col-sm-8 col-sm-offset2 col-lg-6 col-lg-offset3 mx-auto text-center">
+              <div>
+                <h1 class="text-uppercase grey_color2 pb-3 pt-4 fw-bold" id="createEditModalLabel"></h1>
+              </div>
+
+              <i class="fa-solid fa-minus fa-xl grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i>
+              <i class="fa-solid fa-star fa-xl grey_color2 rotate"></i>
+              <i class="fa-solid fa-minus fa-xl grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i><i
+                class="fa-solid fa-minus fa-xl minus_i grey_color2"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12 mx-auto text-center">
+              <img class="img-fluid w-100 modal_img1" src="img/kurs-osnove-programiranja.jpg" alt="">
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 mx-auto text-center pt-5 pb-2">
+
+                <div id="modal1text" >Cilj kursa Napredno programiranje je da polaznici steknu upravo
+                  fleksibilnost koja će im kasnije, u praktičnom radu biti neophodna. Na Vama je u kom pravcu ćete se
+                  usmeriti nakon ovog kursa, da li će to biti Web programiranje frontend ili Web programiranja backend .
+                  Naš cilj je da Vam ovim kursom pružimo mogućnost da sami odlučite u kom pravcu ćete razvijati svoju
+                  karijeru.</div>
+
+                <div id="modal2text" style="display:none;">Cilj ovog kursa je da početnicima olakša proces učenja jer je
+                  za razvijanje naprednijih veština kakve se danas traže najvažnije naučiti osnove. Dobro poznavanje
+                  osnovnih koncepata ključno je za kasnije implementiranje teorijskog znanja u praktičnu primenu. Zato
+                  je važno put programiranja započeti baš sa Osnovama programiranja. U toku 10 nedelja obuke učimo naše
+                  polaznike da baš kao i pravi programeri, razmišljaju algoritamski i da kroz teoriju, praktične primere
+                  i zadatke rešavaju programerske probleme.</div>
+
+                <div id="modal3text" style="display:none;">SmartInIT obuka za web developere pomoći će Vam da uspešno
+                  ovladate osnovama HTML-a, JavaScript-a, CSS-a, HTTP-a, Angular-a, i drugih alata koji „daju život i
+                  izgled“ aplikaciji. Izbor tehnologija za učenje i praktičan rad na aplikacijama koje u potpunosti
+                  prate zahteve današnjeg korisnika daju odličnu osnovu za rad i dalje usavršavanje u pravcu frontend-a.
+                  Polaznici kroz praktične primere uče kako se prilagođava User Interface, deo aplikacije sa kojim
+                  korisnici komuniciraju. </div>
+
+                <div id="modal4text" style="display:none;">Kurs je namenjen svima koji žele da se upoznaju sa najnovijim
+                  tehnologijama koji se danas korise za izradu veb sajta, a posebno onima koji vole da znaju kako
+                  program funkcioniše “ispod haube”, na backend delu veb sajta. Kurs mogu pohađati svi koji imaju dobro
+                  poznavanje osnova programiranja, sistemskog programiranja i OOP koncepata, kao i za one koje se već
+                  bave veb programiranjem i žele da prošire svoje znanje upoznajući se sa ASP.NET MVC tehnologijom,
+                  jednom od najzastupljenihjih tehnologija u svetu.</div>
+
+                <div id="modal5text" style="display:none;">Kurs Manuelno testiranje softvera je namenjen svima koji žele
+                  da se bave manuelnim ili automatskim testiranjem Web aplikacija ili Desktop aplikacija. Kurs je
+                  prilagođen početnicima u oblasti manuelnog testiranja softvera i predstavlja odličan početak za one
+                  koji žele da se preusmere i oprobaju kao pronalazači bug-ova. Drugim rečima, ovo je kurs koji je
+                  namenjen svima koji ne vole kada neki program “baguje” i imaju želju to da promene. Naime, zadatak QA
+                  testera je upravo to - da nađe greške i disfunkcionalnosti u aplikaciji i na taj način unapredi njene
+                  performanse.</div>
+
+                <div id="modal6text" style="display:none;">Kurs Automatsko testiranje softvera je namenjen polaznicima
+                  koji žele da steknu teorijska i praktična znanja iz oblasti automatskog testiranja Web ili Desktop
+                  aplikacija. Kurs je koncipiran tako da ga mogu pratiti kako početnici u oblasti testiranja softvera,
+                  tako i oni koji već imaju predznanje iz ove oblasti, kao na primer polaznici koji su završili naš kurs
+                  Manuelno testiranje softvera.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer border_none mx-auto text-center pb-5">
+          <button type="button" class="btn button_modal1" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"
+              style="color: #ffffff;"></i> Close Window</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- / MODAL END -->
+
+
+<!--  MODAL UPIS  -->
+  <div class="modal fade" id="modalUpis" tabindex="-1" aria-labelledby="createEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createEditModalLabel">Reservation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="unosForma">
+            <p id="izmenaID" class="d-none"></p>
+
+            <label for="coursename">Course Name:</label>
+            <input type="text" id="coursename" name="coursename" class="form-control" placeholder='' disabled value="">
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="napriceme" class="form-control"  placeholder='' value="" disabled>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control"  minlength="3" placeholder='' value="" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" minlength="3" class="form-control"  placeholder='' value="" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control"  placeholder='' value="" required>
+
+            <label for="note">Note:</label>
+            <textarea name="note" id="note" class="form-control" value=""></textarea>
+            <hr>
+            <button class="btn btn-success" data-bs-dismiss="modal" class="submit" type="submit" >Reserve</button>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /  MODAL UPIS END -->
+
+  <!--  MODAL IZMENA  -->
+  <!-- <div class="modal fade" id="modalizmena" tabindex="-1" aria-labelledby="createEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createEditModalLabel">Izmeni Rezervaciju</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="unosForma">
+            <p id="izmenaID" class="d-none"></p>
+
+            <label for="coursename">Course Name:</label>
+            <input type="text" id="coursename" name="coursename" class="form-control" placeholder='' disabled value="">
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="napriceme" class="form-control"  placeholder='' value="" disabled>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control"  placeholder='' value="">
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" class="form-control"  placeholder='' value="">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" class="form-control"  placeholder='' value="">
+
+            <label for="note">Note:</label>
+            <textarea name="note" id="note" class="form-control" value=""></textarea>
+            <hr>
+            <button class="btn btn-primary">Reserve</button><button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- /  MODAL IZMENA END -->
+
+  <!-- FOOTER -->
+  <footer class="footer_color1">
+    <div class="container">
+      <div class="row text-light  pt-3 pb-3">
+        <div class="col-lg-4 col-sm-12 mx-auto text-center pt-5 pb-5">
+          <h4 class="text-uppercase">Location</h4>
+          <p>Smartinit</p>
+          <p><i class="fa-solid fa-location-dot fa-lg green_color2"></i> Novi Sad, Serbia</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 mx-auto text-center pt-5 pb-5">
+          <h4 class="text-uppercase pb-2">Around the web</h4>
+          <div class="fbicon" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-success" data-bs-placement="bottom"
+            title="Follow us on Facebook" data-bs-offset="15,15">
+            <a href="#"><i class="fa-brands fa-square-facebook fa-2xl p-2"></i></a>
+          </div>
+          <div class="fbicon" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-success" data-bs-placement="bottom"
+            title="Follow us on Instagram" data-bs-offset="15,15">
+            <a href="#"><i class="fa-brands fa-square-instagram fa-2xl p-2"></i></a>
+          </div>
+          <div class="fbicon" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-success" data-bs-placement="bottom"
+            title="Follow us on Twitter" data-bs-offset="15,15">
+            <a href="#"><i class="fa-brands fa-square-twitter fa-2xl p-2"></i></a>
+          </div>
+          <div class="fbicon" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-success" data-bs-placement="bottom"
+            title="Follow us on Linkedin" data-bs-offset="15,15">
+            <a href="#"><i class="fa-brands fa-linkedin fa-2xl p-2"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 mx-auto text-center pt-5 pb-5">
+          <h4 class="text-uppercase">About smartinit</h4>
+          <p>PanonIT Code Academy</p>
+          <p><a href="#" class="text-success">Start Course</a></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mx-auto text-center footer_color2 text-light p-3">Copyright &copy; Marko Mirkovic 2023</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#">
+    <div class="gototop">
+      <i class="fa-solid fa-circle-arrow-up fa-xlz green_color2" data-bs-toggle="tooltip" data-bs-placement="left"
+        title="Go to Top" data-bs-custom-class="tooltip-success" data-bs-offset="0,15"></i>
+    </div>
+  </a>
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <!-- jQuery Validator plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <script src="js/customscript.js"></script>
+  <script src="js/courses.js"></script>
+
+</body>
+
+</html>
