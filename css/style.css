@@ -594,9 +594,3 @@ tbody, td, tfoot, th, thead, tr {
   color: white;
 }
 
-
-
-/* <td><button id="` + kurs.details + `" class="btn button_kurs dugme_${kurs.id}">
-Details</button></td>
-<td><button id="` + kurs.reservation + `" class="btn button_kurs2 dugme2_${kurs.id}">
-Reserve</button></td> */
